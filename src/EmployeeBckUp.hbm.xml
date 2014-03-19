@@ -6,7 +6,7 @@
 <hibernate-mapping>
 	<class name="gpa.hibernate.main.Employee" table="Employee">
 		<meta attribute="class-description">
-			This class contains the employee detail.
+			Hier staan de details van de Employee in de DataBase.
 		</meta>
 		<id name="id" type="int" column="id">
 			<generator class="native" />
@@ -19,16 +19,13 @@
 		<property name="lastName" column="last_name" type="string" />
 		<property name="salary" column="salary" type="int" />
 	</class>
-
 	<class name="gpa.hibernate.main.Certificate" table="Certificate">
 		<meta attribute="class-description">
-			This class contains the certificate records.
+			Hier staan de details van de certificaten in de DataBase..
 		</meta>
 		<id name="id" type="int" column="id">
 			<generator class="native" />
 		</id>
 		<property name="name" column="certificate_name" type="string" />
 	</class>
-
 </hibernate-mapping> 
-

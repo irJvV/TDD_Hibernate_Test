@@ -2,7 +2,7 @@ package gpa.hibernate.test;
 
 import static org.junit.Assert.assertEquals;
 import gpa.hibernate.main.Employee;
-import gpa.hibernate.main.Hibernate_Entry;
+
 
 import org.junit.Test;
 
