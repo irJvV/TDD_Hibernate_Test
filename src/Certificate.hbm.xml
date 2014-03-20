@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="gpa.hibernate.main.Certificate" table="Certificate">
+		<meta attribute="class-description">
+			This class contains the certificate records.
+		</meta>
+		<id name="id" type="int" column="id">
+			<generator class="native" />
+		</id>
+        <!--  >many-to-one class name="gpa.hibernate.main.Employee" table="Employee"/-->
+		<property name="emp_id" column="employee_id" type="int" />
+		<property name="name" column="certificate_name" type="string" />
+    </class>
+</hibernate-mapping>
