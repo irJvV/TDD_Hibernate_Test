@@ -16,10 +16,10 @@
  jdbc:mysql://localhost:3306/TDD_Hibernate_Test 
  </property> 
  <property name="hibernate.connection.username"> 
- gpabna<!-- TDD_Test -->
+ TDD_Test
  </property> 
  <property name="hibernate.connection.password"> 
- nlidcx264142<!-- test@1234 -->
+ test@1234
  </property> 
  
  <!-- List of XML mapping files --> 
