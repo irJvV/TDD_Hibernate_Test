@@ -12,10 +12,11 @@
 		<id name="id" type="int" column="id">
 			<generator class="native" />
 		</id>
-		<set name="certificates" cascade="all">
+		<list name="certificates" cascade="all">
 			<key column="employee_id" />
+			<list-index column="idx"/>
 			<one-to-many class="gpa.hibernate.main.Certificate" />
-		</set>
+		</list>
 		<property name="firstName" column="first_name" type="string" />
 		<property name="lastName" column="last_name" type="string" />
 		<property name="salary" column="salary" type="int" />

@@ -1,5 +1,6 @@
 package gpa.hibernate.main;
 
+import java.util.List;
 import java.util.Set;
 
 public class Employee {
@@ -7,7 +8,8 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private int salary;
-	private Set certificates;
+	//privaSet certificates;
+	private List certificates;
 
 	public Employee() {
 		this.firstName = "Gijs";
@@ -53,11 +55,19 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public Set getCertificates() {
-		return certificates;
+//	public Set getCertificates() {
+//		return certificates;
+//	}
+	
+//	public void setCertificates(Set certificates) {
+//		this.certificates = certificates;
+//	}
+	
+	public List getCertificates() {
+	return certificates;
 	}
 
-	public void setCertificates(Set certificates) {
+	public void setCertificates(List certificates) {
 		this.certificates = certificates;
 	}
 	

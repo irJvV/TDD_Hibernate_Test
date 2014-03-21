@@ -1,5 +1,6 @@
 package gpa.hibernate.main;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Iterator;
@@ -38,15 +39,35 @@ public class ManageEmployee {
 //		Integer empID3 = ME.addEmployee("John", "Paul", 10000);
 
 		
+//		/* Let us have a set of certificates for the first employee */ 
+//		HashSet set1 = new HashSet(); 
+//		set1.add(new Certificate("MCA")); 
+//		set1.add(new Certificate("MBA")); 
+//		set1.add(new Certificate("PMP")); 
+//		
+//		/* Add employee records in the database */ 
+//		Integer empID1 = ME.addEmployee("Manoj", "Kumar", 4000, set1); 
+//		
+//		/* Another set of certificates for the second employee */ 
+//		HashSet set2 = new HashSet(); 
+//		set2.add(new Certificate("BCA")); 
+//		set2.add(new Certificate("BA")); 
+//		
+//		/* Add another employee record in the database */ 
+//		Integer empID2 = ME.addEmployee("Dilip", "Kumar", 3000, set2);
+		
 		/* Let us have a set of certificates for the first employee */ 
-		HashSet set1 = new HashSet(); set1.add(new Certificate("MCA")); 
-		set1.add(new Certificate("MBA")); set1.add(new Certificate("PMP")); 
+		ArrayList set1 = new ArrayList(); 
+		set1.add(new Certificate("MCA")); 
+		set1.add(new Certificate("MBA")); 
+		set1.add(new Certificate("PMP")); 
 		
 		/* Add employee records in the database */ 
 		Integer empID1 = ME.addEmployee("Manoj", "Kumar", 4000, set1); 
 		
 		/* Another set of certificates for the second employee */ 
-		HashSet set2 = new HashSet(); set2.add(new Certificate("BCA")); 
+		ArrayList set2 = new ArrayList(); 
+		set2.add(new Certificate("BCA")); 
 		set2.add(new Certificate("BA")); 
 		
 		/* Add another employee record in the database */ 
@@ -71,7 +92,7 @@ public class ManageEmployee {
 	}
 
 	/* Method to CREATE an employee in the database */
-	public Integer addEmployee(String fname, String lname, int salary, Set cert) {
+	public Integer addEmployee(String fname, String lname, int salary, ArrayList cert) {
 
 		Session session = factory.openSession();
 		Transaction tx = null;
@@ -118,7 +139,7 @@ public class ManageEmployee {
 				System.out.print("First Name: " + employee.getFirstName()); 
 				System.out.print(" Last Name: " + employee.getLastName()); 
 				System.out.println(" Salary: " + employee.getSalary());
-				Set certificates = employee.getCertificates(); 
+				List certificates = employee.getCertificates(); 
 				System.out.println("********** "+certificates+" **********");
 				for (Iterator iterator2 = certificates.iterator(); iterator2.hasNext();){ 
 					Certificate certName = (Certificate) iterator2.next(); 
